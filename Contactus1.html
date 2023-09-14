@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rafa Construction &mdash; We construct with Elegance and Class. </title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+
+    <!-- Development CSS -->
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+
+    <!-- Deployable CSS -->
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__menu-bar">
+        <div class="header__logo-box">
+            <img
+                src="img/logo.png"
+                class="header__logo-box"
+                srcset="img/logo.png 2x" />
+
+            <use xlink:href="img/logo.png"></use>
+        </div>
+
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="/index.html" class="header__nav-link"
+                >Home</a
+              >
+            </li>
+            <li class="header__nav-item">
+              <a href="/aboutus.html" class="header__nav-link">About Us</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="/estate.html" class="header__nav-link">Estate</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="/projects.html" class="header__nav-link">Projects</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="./gallery.html" class="header__nav-link">Gallery</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="./contactus.html" class="header__nav-link header__nav-link--active">Contact Us</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="./Projects1.html" class="header__nav-link">Projects1</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__btn-box">
+          <a href="#" class="btn btn--white">Login</a>
+          <a href="#" class="btn btn--green">Sign Up</a>
+        </div>
+      </div>
+    </header>
+</body>
+</html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles1.css">
+    <title>Contact Us</title>
+</head>
+<body>
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you!</p>
+        <form id="contact-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email</label>
+            <input type="email" class="form__input" id="contact-email" placeholder="Michael@example.com
+            " name="contact-email" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="success-message" id="success-message">
+        <p>Thank you for contacting us! We'll get back to you soon.</p>
+    </div>
+
+
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+             const contactForm = document.getElementById('contact-form');
+             const successMessage = document.getElementById('success-message');
+
+        contactForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+            // Simulate form submission (you can replace this with your server-side code)
+                 setTimeout(function () {
+                contactForm.style.display = 'none';
+                successMessage.style.display = 'block';
+                     }, 1000);
+                  });
+            });
+
+    </script>
+
+
+</body>
+</html>

@@ -873,5 +873,21 @@ height:3.6rem}
   cursor: pointer;
 }
 
+.success-message {
+    align-items: center;
+    justify-content: right;
+    max-width: 100%;
+    margin: 0px;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
 
 

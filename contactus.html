@@ -47,6 +47,9 @@
             <li class="header__nav-item">
               <a href="./contactus.html" class="header__nav-link header__nav-link--active">Contact Us</a>
             </li>
+            <li class="header__nav-item">
+              <a href="./Projects1.html" class="header__nav-link">Projects1</a>
+            </li>
           </ul>
         </nav>
 
@@ -59,7 +62,7 @@
         <div class="header__hero-img-box">
           <img
             src="img/hero-img-2x.png"
-            alt="BuildCo Hero Image"
+            alt="Rafa Hero Image"
             srcset="img/hero-img-1x.png 1x, img/hero-img-2x.png 2x"
             class="header__hero-img"
           />
@@ -337,7 +340,7 @@
           </div>
 
           <div class="contact-us__right">
-            <form action="#" class="contact-us__form form">
+            <form id="contact-form" class="contact-us__form form">
               <div class="form__col form__col--1 u-margin-bottom-small">
                 <div class="form__group">
                   <label for="name" class="form__label">Name</label>
@@ -379,9 +382,16 @@
                 </div>
               </div>
 
-              <button class="btn btn--green">Send us a message</button>
+              <button class="btn btn--green" type="submit">Send us a message</button>
             </form>
           </div>
+
+          <div class="success-message" id="success-message">
+            <p>Thank you for contacting us! We'll get back to you soon.</p>
+        </div>
+
+        
+
         </div>
       </section>
     </main>
@@ -485,5 +495,25 @@
         <p class="developer-text">Made with 🤍 && 🔥 by Faz'al</p>
       </div>
     </footer>
+
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function () {
+           const contactForm = document.getElementById('contact-form');
+           const successMessage = document.getElementById('success-message');
+
+      contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+          // Simulate form submission (you can replace this with your server-side code)
+               setTimeout(function () {
+              contactForm.style.display = 'none';
+              successMessage.style.display = 'block';
+                   }, 1000);
+                });
+          });
+
+  </script>
+
+
   </body>
 </html>
