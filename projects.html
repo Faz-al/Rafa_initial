@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rafa Construction &mdash; We construct with Elegance and Class. </title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+
+    <!-- Development CSS -->
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+
+    <!-- Deployable CSS -->
+    <link rel="stylesheet" href="css/contactus.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__menu-bar">
+        <div class="header__logo-box">
+            <img
+                src="img/logo.png"
+                class="header__logo-box"
+                srcset="img/logo.png 2x" />
+
+            <use xlink:href="img/logo.png"></use>
+        </div>
+
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="/index.html" class="header__nav-link"
+                >Home</a
+              >
+            </li>
+            <li class="header__nav-item">
+              <a href="/aboutus.html" class="header__nav-link">About Us</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="/estate.html" class="header__nav-link">Estate</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="/projects.html" class="header__nav-link header__nav-link--active">Projects</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="./gallery.html" class="header__nav-link">Gallery</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="./contactus.html" class="header__nav-link">Contact Us</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="./Projects1.html" class="header__nav-link">Projects1</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__btn-box">
+          <a href="#" class="btn btn--white">Login</a>
+          <a href="#" class="btn btn--green">Sign Up</a>
+        </div>
+      </div>
+      
+
+          <section class="projects">
+            <div class="slider">
+              <div class="slide">
+                <div class="slide-caption">
+                    <h2>Project 1</h2>
+                    <p>Completed Project</p>
+                  </div>
+                <img src="img/project1.jpg"  alt="Project 1" />
+                <img src="img/Project2.jpg" alt="Project 1" />
+              </div>
+              
+
+              <section class="projects">
+                <div class="slider">
+                  <div class="slide">
+                    <div class="slide-caption">
+                      <h2>Project 2</h2>
+                      <p>Ongoing Project</p>
+                    </div>
+                    <div class="images">
+                      <img src="img/project1.jpg" alt="Project 2" />
+                      <img src="img/Project2.jpg" alt="Project 2" />
+                    </div>
+                  </div>
+                  <!-- Add more slide elements for other projects -->
+                </div>
+              </section>
+
+                
+
+
+
+              
+              <!-- Add more slide elements for other projects -->
+            </div>
+          </section>
+        </main>
+      
+        <footer class="footer">
+          <!-- ... your footer content ... -->
+        </footer>
+      
+        <!-- JavaScript Code -->
+        <script>
+          const slider = document.querySelector('.slider');
+          const slides = document.querySelectorAll('.slide');
+          let currentSlide = 0;
+      
+          function showSlide(index) {
+            slides.forEach((slide, i) => {
+              slide.style.transform = `translateX(${(i - index) * 100}%)`;
+            });
+          }
+      
+          function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+          }
+      
+          function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+          }
+      
+          // You can also add automatic slide change using setInterval
+          setInterval(nextSlide, 5000);
+      
+          showSlide(currentSlide);
+        </script>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>
